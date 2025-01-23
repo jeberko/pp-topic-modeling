@@ -1,0 +1,171 @@
+
+                    You are a software engineer/architect evaluating a codebase repository. All you have for your analysis is the output of a topic modeling model which provides the following information. You must due your best based on your expert knowledge to ascertain what the purpose and high level functionality of the codebase is.
+
+                    Please provide:
+                    • Very high level bullets of the main functionality
+                    • Detailed explanation of each identified functionality
+                    • Potential use cases for this codebase
+                    • Technical architecture insights
+                    • Suggestions for potential improvements or missing components
+
+                    Analysis Input:
+                    --------------
+                    
+    Code Analysis Summary:
+    
+    Topic Word Distributions:
+    ----------------------------------------
+    Topic 1: 
+Topic 2: 
+Topic 3: io (2.89), s (2.09), json (1.74), dict (1.65), execution (1.57), import (1.47), logger (1.40), data (1.39), criteria (1.36)
+Topic 4: 
+Topic 5: multipart (0.41), encoded (0.34), boundary (0.21), end (0.15), test (0.10)
+Topic 6: m (0.44), hahn (0.40), brand (0.40), c (0.39), assertion (0.35), l (0.33), llm (0.31), x (0.28), p (0.28)
+Topic 7: slide (2.90), text (2.21), config (1.70), layout (1.23), table (1.06), self (0.92), title (0.84), pos (0.76), default (0.70)
+Topic 8: config (0.74), p (0.74), url (0.64), allow (0.63), control (0.63), access (0.62), temp (0.56), bucket (0.55), writer (0.45)
+Topic 9: model (0.26), guidelines (0.23), foundations (0.16), schema (0.13), id (0.12)
+Topic 10: 
+    
+    Document Assignments:
+    ----------------------------------------
+    notebooks/2-evaluator/quantitative-evaluator/quantitative_evaluator.py → Topic 3 (0.65)
+src/brandbrief/lambdas/evaluator/quantitative_evaluator.py → Topic 3 (0.55)
+src/brandbrief/lambdas/evaluator/lambda_function.py → Topic 3 (0.46)
+src/brandbrief/lambdas/file_upload/lambda_function.py → Topic 3 (0.48)
+src/brandbrief/lambdas/poll_step_functions/lambda_function.py → Topic 3 (0.71)
+src/brandbrief/lambdas/trigger_step_functions/lambda_function.py → Topic 3 (0.76)
+src/brandbrief/lambdas/invoke_step_functions/lambda_function.py → Topic 3 (0.75)
+src/brandbrief/lambdas/utils/WordDocExtractor.py → Topic 7 (0.67)
+src/brandbrief/lambdas/utils/ConfigLoader.py → Topic 7 (0.63)
+src/brandbrief/lambdas/utils/s3_writer.py → Topic 3 (0.43)
+src/brandbrief/lambdas/utils/helpers.py → Topic 7 (0.73)
+src/brandbrief/lambdas/pptx_to_text/test.py → Topic 3 (0.42)
+src/brandbrief/lambdas/pptx_to_text/lambda_function.py → Topic 3 (0.83)
+src/brandbrief/lambdas/generator/brand_brief_content_generator/lambda_function.py → Topic 3 (0.63)
+src/brandbrief/lambdas/generator/json_to_ppt/PresentationBuilder.py → Topic 3 (0.79)
+src/brandbrief/lambdas/generator/json_to_ppt/lambda_function.py → Topic 3 (0.47)
+src/brandbrief/lambdas/generator/json_to_ppt/slides/TextWithTableSlide.py → Topic 7 (0.75)
+src/brandbrief/lambdas/generator/json_to_ppt/slides/Slide.py → Topic 3 (0.76)
+src/brandbrief/lambdas/generator/json_to_ppt/slides/SlideWSections.py → Topic 8 (0.47)
+src/brandbrief/lambdas/generator/json_to_ppt/slides/SlideFactory.py → Topic 7 (0.66)
+src/brandbrief/lambdas/generator/json_to_ppt/slides/CoverSlide.py → Topic 7 (0.77)
+src/brandbrief/lambdas/generator/json_to_ppt/slides/TextSlide.py → Topic 7 (0.76)
+src/brandbrief/lambdas/basic_auth_requests/lambda_function.py → Topic 3 (0.85)
+src/brandbrief/lambdas/S3_pptx_to_text/lambda_function-LANGCHAIN.py → Topic 7 (0.47)
+src/brandbrief/lambdas/S3_pptx_to_text/lambda_function.py → Topic 3 (0.79)
+src/brandbrief/ui/test.py → Topic 6 (0.69)
+    
+    Code Structure Analysis:
+    ----------------------------------------
+    
+File: quantitative_evaluator.py
+Imports: yaml, pandas, logging, json, boto3, sys, ConfigLoader, ConfigLoader, file, into, response, LLM
+
+File: quantitative_evaluator.py
+Imports: logging, yaml, pandas, json, boto3, json_repair, file, response, LLM
+
+File: lambda_function.py
+Imports: yaml, json, logging, string, Template, quantitative_evaluator, Lambda, sagemaker, the
+
+File: lambda_function.py
+Imports: json, boto3, logging, utils.ConfigLoader, ConfigLoader
+
+File: lambda_function.py
+Imports: json, boto3, logging, the
+
+File: lambda_function.py
+Imports: json, traceback, logging, boto3
+
+File: lambda_function.py
+Imports: json, traceback, logging, boto3, time, datetime, datetime, utils.ConfigLoader, ConfigLoader
+
+File: __init__.py
+
+File: WordDocExtractor.py
+Classes: WordDocExtractor
+Imports: docx, Document, paragraphs, tables, headers, footers, footnotes
+
+File: ConfigLoader.py
+Classes: ConfigLoader
+Imports: os, yaml
+Decorators: classmethod
+
+File: s3_writer.py
+Classes: S3Writer
+Imports: boto3, os, datetime, datetime
+
+File: helpers.py
+Imports: pptx.util, Inches
+
+File: test.py
+Imports: base64
+
+File: lambda_function.py
+Imports: json, base64, logging, io, BytesIO, pptx, Presentation, requests_toolbelt.multipart, decoder, re, ppt, ppt, event, event, the, ppt
+
+File: lambda_function.py
+Imports: json, traceback, logging, boto3, uuid, utils.ConfigLoader, ConfigLoader, botocore.exceptions, ClientError, the
+
+File: __init__.py
+
+File: PresentationBuilder.py
+Classes: PresentationBuilder
+Imports: json, slides.SlideFactory, SlideFactory, pptx, Presentation
+
+File: lambda_function.py
+Imports: json, traceback, logging, PresentationBuilder, PresentationBuilder, utils.s3_writer, S3Writer, utils.ConfigLoader, ConfigLoader
+
+File: TextWithTableSlide.py
+Classes: TextWithTableSlide
+Imports: slides.Slide, Slide, utils.ConfigLoader, ConfigLoader, utils.helpers, get_dimension, pptx.util, Inches
+
+File: Slide.py
+Classes: Slide
+
+File: SlideWSections.py
+Classes: SlideWSections
+Imports: slides.Slide, Slide, utils.ConfigLoader, ConfigLoader, utils.helpers, get_dimension, pptx.util, Inches, pptx.enum.text, PP_ALIGN, pptx.dml.color, RGBColor
+
+File: SlideFactory.py
+Classes: SlideFactory
+Imports: slides.CoverSlide, CoverSlide, slides.TextSlide, TextSlide, slides.TextWithTableSlide, TextWithTableSlide, slides.SlideWSections, SlideWSections
+Decorators: staticmethod
+
+File: CoverSlide.py
+Classes: CoverSlide
+Imports: slides.Slide, Slide, utils.ConfigLoader, ConfigLoader
+
+File: __init__.py
+
+File: TextSlide.py
+Classes: TextSlide
+Imports: slides.Slide, Slide, utils.ConfigLoader, ConfigLoader
+
+File: lambda_function.py
+Imports: base64
+
+File: lambda_function-LANGCHAIN.py
+Imports: sagemaker, logging, traceback, nltk, langchain_community.document_loaders, S3FileLoader, json, event, ppt, xml.sax.saxutils, escape
+
+File: lambda_function.py
+Imports: logging, json, traceback, io, BytesIO, pptx, Presentation, boto3, re, utils.WordDocExtractor, WordDocExtractor, S3
+
+File: test.py
+Imports: json, Business, Business, the, their, awareness, a, the
+
+    Term Clusters:
+    ----------------------------------------
+    
+Cluster 3: accept, answer, apply, asserting, assertion, assertions, assign, attempt, avoided, axis, based, bedrock, bool, booleans, carriage, cast, casting, concat, configuration, contain, contains, converting, copy, count, criteria, criterion, critical, ctriteria, defaulting, detailed, deterministic, df, dict, dictionary, does, drop, ejgw, evaluation, explanation, failed, false, fetching, finalizing, fix, following, foo, forbidden, forming, fqk, fully, generator, identifying, indent, invoke, layer, len, llm, location, lower, matched, messages, non, orient, outcome, outcomes, pandas, parameters, parsing, pd, promt, qualified, reject, repair, request, responses, result, results, return, returns, rstrip, rule, rules, runtime, score, scoring, stage, statement, stats, substitute, sum, sys, terms, threshold, thresholds, unknown, user, usually, variable, weight, words, wrapper
+Cluster 1: access, add, additional, admin, agent, algorithms, alignment, allow, append, application, arn, auth, authorization, base, basic, blank, body, boto, boundary, box, bucket, build, builder, bytes, campaign, caption, cell, cells, cf, chars, check, classmethod, clean, cleanse, client, cls, code, col, colors, cols, column, columns, combine, combined, coming, comparison, compile, completed, conf, config, content, control, correct, cover, create, created, credentials, d, data, datetime, decoder, decoding, def, default, define, description, dimension, dimensions, dims, dirname, disposition, dml, doc, document, docx, dump, dumps, e, east, ejgallo, element, elif, encoded, end, ensure, enum, enumerate, error, eval, evaluator, exc, exception, exceptions, exectution, execution, exists, exit, expiration, expires, expr, extension, extract, extracting, extractor, f, factory, fails, filename, files, finally, findall, float, font, footer, footers, footnotes, form, format, foundations, function, functions, g, generate, generated, getting, graphics, guidelines, handle, handler, hasattr, header, headers, height, helpers, id, import, inbound, inches, index, info, init, instructions, invoking, io, isinstance, item, items, iter, join, json, keys, lambda, latin, layout, layouts, left, level, load, loader, loads, log, logger, machine, main, maroon, media, message, methods, metrics, model, multipart, native, obj, object, objects, open, operations, origin, os, para, paragraph, paragraphs, params, period, placeholders, pos, positions, post, ppt, pptx, presentation, presigned, print, prompt, prs, pt, quantitative, quote, quotes, raise, range, rb, realm, received, records, ref, region, rel, rels, remove, replace, requests, required, response, retuning, right, row, rows, s, safe, sample, save, schema, seconds, section, sections, security, self, sfn, shape, shapes, signed, single, size, sleep, slide, slides, solid, source, spanned, start, started, state, staticmethod, statistics, status, step, stepfunctions, strftime, string, strings, sub, subtitle, succeeded, success, successfully, support, table, tables, temp, template, temporary, test, text, textbox, textframe, texts, tf, time, title, tmp, toolbelt, tr, traceback, try, tx, txt, uffff, unauthorized, unicode, upload, uploaded, uploading, url, username, using, utf, util, utils, uuid, valid, value, visible, w, wait, warning, web, weights, white, width, word, wrap, writer, written, www, wxk, xpos, yaml, ypos
+Cluster 2: accolade, accolades, accountant, accounts, achieve, actions, activate, activated, activation, activations, active, addressing, ads, advocacy, afternoon, age, agency, aiming, align, alternatives, america, amplify, analysis, angeles, annual, answers, anytime, apologize, appellation, applicable, approach, approachable, apr, april, arbor, architecture, aspirational, asset, assets, assignment, assignments, attitudes, attributes, audience, audiences, august, authentic, authenticity, available, average, avg, awards, awareness, baby, background, badge, bar, barefoot, barriers, beach, beat, beer, behavior, behaviors, believe, best, blue, brand, breakdown, bringing, broad, budget, business, busy, buy, buying, cabernet, calendar, care, careers, cases, category, causing, center, centric, chain, challenge, change, channels, characteristics, chardonnay, charleston, chip, city, clarify, clear, click, collections, college, comm, commerce, commercialize, communication, communications, compelling, competition, competitive, competitors, composition, confidence, connect, connecting, connection, connections, consideration, considerations, consistency, consistent, consumer, consumers, consumption, contact, convenience, conversion, cooking, coors, coppola, core, corona, creates, creative, cross, culture, current, currently, date, dates, deadlines, decision, decisions, definition, deliver, deliverables, delivers, demographic, demographics, demonstrate, demos, dependable, describes, design, develop, development, diamond, digital, dining, dinner, discipline, display, distribution, doing, doit, dollar, dollars, double, drink, drive, driven, driving, ds, dwe, easy, educated, elements, emotional, encompasses, ending, engaged, engagement, enjoy, enjoying, entertaining, enthusiast, entry, equity, err, especially, est, establish, estate, evening, events, evergreen, example, exhaustive, existing, experience, expertise, expressed, external, extrinsic, extrinsics, family, feb, feeding, feel, fees, female, festival, fetch, finalized, financial, flavors, flex, focus, focused, focusing, food, founders, friends, funding, funnel, gain, gaps, gen, geography, giving, goal, golf, grocery, group, growth, guiding, h, hahn, happening, healdsburg, high, highest, highlights, highly, historical, holiday, home, hosting, idea, imperatives, includes, increase, influencer, insert, insight, insights, instacart, inta, integrated, intrinsic, j, james, janet, josh, kids, latest, launches, lead, learnings, learns, lexicon, life, like, links, liquid, liquor, lives, living, lot, low, loyalty, m, maintaining, make, mandatories, mar, march, marketing, matter, matters, meal, messaging, mind, moment, moments, month, needed, needs, noir, objective, objectives, oct, offers, opportunity, paid, pairing, park, partners, partnership, partnerships, pebble, people, pickleball, pillars, pinot, plan, planning, platform, po, point, points, portfoli, position, positioning, premium, presence, price, problem, product, professionals, program, programming, programs, provide, proxy, psychographic, publix, pull, pulses, purchase, purchased, purpose, quality, reason, recommendation, recreation, red, redemptions, refreshed, regional, regions, related, relevance, relevancy, relevant, remains, repeat, require, requirements, reserved, resolves, retail, retailer, retired, revenue, rights, rising, rocket, room, rooster, sales, samples, sampling, san, sauvignon, school, seasonal, selection, session, share, shared, shelf, shop, simple, situation, snacks, snippet, snobby, social, solve, solved, space, specific, specify, spending, stages, standard, standing, stay, staying, sticky, store, story, strategies, strategy, strong, suburban, suburbs, succinct, super, surrounding, ta, tactic, tactical, tactics, tadvocacy, talkers, tamplify, target, tastes, tasting, tastings, tbe, tbuy, tclose, tcommunicate, tcommunications, tconsider, tcook, tdate, tdescribe, tdfor, tdifferentiate, tdrive, teacher, tenjoy, tennis, tension, tensure, testablish, texpand, tfocus, tget, tgrow, tguide, themes, thing, threading, thrive, timing, tknow, tlean, tlips, tmanage, tme, tmedium, tmove, total, touch, touchpoint, touchpoints, tovercome, tpaint, tpenetrate, tpoint, tpurchase, translates, transparency, trefer, trend, trends, tretire, treverse, trial, trouble, trust, trying, tscale, tsolve, tthe, tthem, tthis, twin, tyour, types, typically, ultra, undergbefore, unfilled, uniquely, unites, universe, unpretentious, use, used, vacation, valencia, values, varietal, varietals, vehicle, velocity, verified, vision, visuals, volume, vs, want, way, week, weekends, weeks, welcoming, whare, whis, whlove, whthey, win, wine, winemaker, winemaking, winning, won, work, working, world, y, year, years, yes, yields, yo, young
+Cluster 5: args, averaged, brief, char, characters, community, data_structures, depend, deployed, dir, docs, download, enable, encoding, eng, escape, extracted, invoked, listed, need, nltk, notebook, packages, perceptron, punkt, quiet, raw, requires, sagemaker, sax, saxutils, setup, slow, str, tab, tagger, things, true, type, xml
+Cluster 4: b, c, final, foundation, k, l, local, max, memory, n, o, p, processing, r, review, t, term, u, v, x
+    
+    Please provide:
+    1. The main functionality of each topic
+    2. The relationships between topics
+    3. The overall purpose of this codebase
+    4. Any potential missing or underrepresented topics
+    5. Suggested refactoring or organization improvements
+    
